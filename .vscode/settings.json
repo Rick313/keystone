@@ -1,0 +1,7 @@
+{
+  "workbench.colorTheme": "1984 - Cyberpunk",
+  "haskell.plugin.class.codeLensOn": false,
+  "haskell.plugin.ghcide-type-lenses.globalOn": false,
+  "haskell.plugin.importLens.codeLensOn": false,
+  "haskell.plugin.importLens.codeActionsOn": false
+}

@@ -1,0 +1,62 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.36.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           keystone
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/keystone#readme>
+homepage:       https://github.com/githubuser/keystone#readme
+bug-reports:    https://github.com/githubuser/keystone/issues
+author:         RAFAIDEEN Richard
+maintainer:     RAFAIDEEN Richard
+copyright:      2024 Author name here
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/keystone
+
+executable keystone-exe
+  main-is: Main.hs
+  other-modules:
+      Features.Account.Auth.Register
+      Features.Account.Auth.Signin
+      Features.Account.Code
+      Features.Account.Errors
+      Features.Account.Types
+      HttpServer
+      Logger
+      Routes.Auth.Register
+      Routes.Errors
+      Routes.Validator
+      Paths_keystone
+  autogen-modules:
+      Paths_keystone
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , email-validate
+    , http-types
+    , jwt
+    , mtl
+    , password
+    , random
+    , regex-tdfa
+    , sqlite-simple
+    , text
+    , time
+    , uuid
+    , wai
+    , warp
+  default-language: Haskell2010
