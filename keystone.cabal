@@ -26,12 +26,16 @@ source-repository head
 executable keystone-exe
   main-is: Main.hs
   other-modules:
+      Control.Monad.Transformer
+      Data.EitherT
+      Data.StateT
+      Features.Account.Auth
       Features.Account.Auth.Register
       Features.Account.Auth.Signin
-      Features.Account.Code
       Features.Account.Errors
+      Features.Account.Token
       Features.Account.Types
-      HttpServer
+      Http.Handler
       Logger
       Routes.Auth.Register
       Routes.Errors
